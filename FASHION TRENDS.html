@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Fashion Lifestyle Website</title>
+        <meta charset="utf-8">
+        <meta neme="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+         <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .right-menu li{
+         display: inline-block;
+         margin-top: 30px !important; 
+        }
+        .right-menu li .fab{
+         font-size: 18px;
+         margin-right: 10px;
+         cursor: pointer;
+        }
+        .navbar-brand img{
+            width:160px;
+        }
+        .navbar-brand{
+            left:50%;
+            top:25px;
+            transform: translateX(-50%);
+            position:absolute;
+        }
+        .header{
+            background:#f5f6fc;
+            margin-bottom: 80px;
+        }
+        .navbar{
+            padding:0 35px !important;
+        
+        }
+        .navbar-toggler{
+            border:none !important;
+            outline:none !important;
+            padding:0 !important;
+            margin-top:30px;
+        }
+        .navbar-toggler .fa{
+            font-size:30px;
+            cursor: pointer;
+        }
+        .banner-img{
+            margin: 80px 115px;
+            width:60%;
+        }
+        .banner-img img{
+            width: 100%;
+           
+        }
+        .banner{
+            position: relative;
+        }
+        .banner-title{
+            position: absolute;
+            left: 50%;
+            top: 20%;
+           
+        }
+        .banner-title h1{
+            font-size: 55px;
+            background: rgba(0,0,0,0.75);
+            color:#fff;
+            line-height: 70px;
+            padding: 10px 10px 0 10px;
+
+        }
+        <!--fashion trends---->
+        .fashion-trends{
+            padding: 100px 0;
+        }
+        .fashion-box{
+            margin: 80px 0;
+        }
+        .title-style h1{
+            padding: 40px 0;
+
+        }
+        .title-style{
+            margin: 0 auto 80px;
+            height: 120px;
+            width: 700px;
+            background: #fff;
+            position: relative;
+            box-shadow: 0 4px 5px 0 rgba(0,0,50,0.5);
+        }
+        
+        .title-style::after{
+            content: '';
+            height: 100px; 
+            width: 200px;
+            background-color: #f992a6;
+            position: absolute; 
+            top: 10px; 
+            left: -10px; 
+            z-index: -1;
+        }
+        .title-style::before{
+            content: '';
+            height: 100px; 
+            width: 200px;
+            background-color: #f992a6;
+            position: absolute; 
+            bottom: -10px; 
+            right: -10px; 
+            z-index: -1;
+        }
+        .trending-img{
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .trending-img img{
+            width: 100%;
+        }
+        .btn-buy{
+            width: 150px;
+            padding: 10px 0;
+            outline: none !important;
+            border: 0;
+            border-radius: 2px;
+            position: absolute;
+            background: #fff;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50% ,0);
+            transition: .6s;
+            opacity: 0;
+            z-index: 1
+        }
+        .trending-img:hover .btn-buy{
+            transform: translate(-50%,50%);
+            bottom: 50%;
+            opacity: 1;
+        }
+        .overlay{
+            height: 0%;
+            width: 100%;
+            background: #333;
+            position: absolute;
+            top: 0;
+            opacity: .5;
+            transition: .5s;
+        }
+        .trending-img:hover .overlay{
+            opacity: .5;
+            height: 100%;
+        }
+       .offer{
+        background-image: url(fashion.jpg);
+        background-size: cover;
+        background-position: center;
+       }
+       .row{
+        margin: initial !important;
+       }
+       .subscribe{
+        max-width: 500px;
+        margin-top: 80px;
+        padding: 60px;
+        background: #ffffff8c;
+        margin-bottom: 20px;    
+       }
+       .subscribe a{
+        width:100px;
+        display:block;
+        color: #fff !important;
+        background: #000;
+        text-decoration: none;
+        padding: 5px;
+        text-align: center;
+       }
+       .offer img{
+        width: 300px;
+        height: 400px;
+        margin: -100px;
+        margin-top: 150px;
+       }
+     
+
+
+
+
+
+      .fashion-blog{
+        margin: 250px 0 150px 0;
+      } 
+      .blog-img{
+        margin-top: 50px;
+        height: 300px;
+        width: 300px;
+        display: inline-block;
+      }
+      .blog-img img{
+        width: 100%;
+        height: 100%;
+
+      }
+      .fashion-blog h1{
+        padding: 20px;
+        margin-top: 50px;
+        font-weight: bold;
+      }
+
+
+      
+
+
+
+
+      .fashion-brands{
+        margin-bottom: 150px;
+      }
+       .brand-logo{
+        width: 200px;
+        height: 200px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 50px auto 30px;
+        box-shadow: 0 2px 40px 0 rgba(110,130,208,.18);
+      }
+
+      .brand-logo img{
+        width: 100px;
+        margin: 50px  auto;
+      }
+      .fashion-brands p{
+        margin-top: 30px;
+        font-weight: bold;
+      }
+      
+
+
+      .footer{
+        margin-top: 150px;
+        background: #f5f6fc;
+      }
+      .payment insta-img  .app-download{
+        margin: 50px auto;
+      }
+      .payment img{
+        width: 300px;
+        cursor: pointer;
+      }
+      .insta-img img{
+         width: 75px;
+         padding: 5px;
+         cursor: pointer; 
+      }
+      .app-download img{
+        width: 200px;
+
+      }
+      .footer h5{
+        margin-bottom: 50px;
+        
+      }
+      .footer h5::before{
+        content:'';
+        width: 70px;
+        height: 3px;
+        background: yellow;
+        top:75px;
+        position: absolute;
+
+      }
+      .footer-icons{
+         text-align: right;
+
+      }
+      .footer-icons .fab{
+         margin: 0 14px auto;
+         font-size: 20px;
+         cursor: pointer;
+      }
+      
+       </style>
+        </head>
+        <body>
+            <section class="header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                   
+                          <a class="navbar-brand" href=""><img src="fashion-logo.jpg"></a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            
+                            <i class="fa fa-bars"></i>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                             
+                              <li class="nav-item">
+                                <a class="nav-link" href="">POLICY</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="">CONDITION</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="">DOWNLOAD</a>
+                              </li>
+                              
+                            </ul>
+                            <ul class="right-menu ml-auto">
+                               <li> <a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                               <li> <a href=""><i class="fab fa-pinterest"></i></a></li>
+ 
+                             <li> 
+                                <div class="input-group mb-3">  
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" arial-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                        </li> 
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                      <div class="banner">
+                        <div class="banner-img">
+                            <img src="banner.jpg">
+                        </div>
+                        <div class="banner-title">
+                            <h1>FASHION STORY </h1>
+                            <h1>WOMEN'S LIFESTYLE</h1>
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-------fashion trends----->
+                    <section class="fashion-trends">
+                        <div class="container">
+                            <div class="fashion-box">
+                                <div class="title-style">
+                                    <h1>FASHIO TRENDS</h1>   
+                                </div>
+                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, voluptatum ut? Culpa, laudantium rem. Temporibus nostrum aperiam cupiditate omnis quae unde ut quam natus exercitationem? Suscipit qui aliquam placeat. Adipisci?</p>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="trending-img">
+                                        <img src="trend-1.jpg">
+                                        <button type="button" class="btn-buy">Buy Now</button>
+                                        <div class="overlay"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="trending-img">
+                                        <img src="trend-2.jpg">
+                                        <button type="button" class="btn-buy">Buy Now</button>
+                                        <div class="overlay"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="trending-img">
+                                        <img src="trend-3.jpg">
+                                        <button type="button" class="btn-buy">Buy Now</button>
+                                        <div class="overlay"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </section>
+           
+         
+            <!------offer------->
+
+            <section class="offer">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src="exclusive.jpeg">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="subscribe">
+                            <h4>FUNSHION EXCLUSIVE</h4>
+                            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nulla officiis vel harum, architecto, praesentium aperiam officia voluptatem reprehenderit incidunt iste rem fuga, tempore quae omnis asperiores at et earum?</P>
+                             <a href="#">subscribe</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            
+            
+            <!----latest blog---->
+           
+           
+            <section class="fashion-blog">
+                <div class="title-style text-center">
+                  <h1>LATEST FASHION BLOG</h1>   
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <div class="blog-img">
+                                <img src="blog-1.jpg">
+                            </div>
+                            <h5>New style 50% offer</h5>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="blog-img">
+                                <img src="blog-2.jpg">
+                            </div>
+                            <h5>Buy 1 Get 1 freer</h5>
+                        </div>
+                        
+                        <div class="col-md-4 text-center">
+                            <div class="blog-img">
+                            <img src="blog-3.jpg">
+                        </div>
+                        <h5>New Jewellery collection</h5>
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <!--fashion brands-->
+
+
+
+
+
+            <section class="fashion-brands">
+                <div class="title-style text-">
+                  <h1>OUR FASHION BRANDS</h1>   
+                </div>
+                <div class="contaner">
+                    <div class="row text-center">
+                        <div class="col-md-3">
+                            <div class="brand-logo">
+                                <img src="brand1.png">
+                                <p>Exclusive Offers</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <div class="brand-logo">
+                                <img src="brand2.png">
+                                <p>Exclusive Offers</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <div class="brand-logo">
+                                <img src="brand3.png">
+                                <p>Exclusive Offers</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-3">
+                            <div class="brand-logo">
+                                <img src="brand4.png">
+                                <p>Exclusive Offers</p>
+                            </div>
+                            
+                        </div>
+
+                    </div> 
+                </section>
+
+             
+         <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="payment">
+                        <h5>PAYMENT GATEWAY</h5>
+                        <img src="payment.png">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="insta-img">
+                            <h5>INSTAGRAM PICS</h5>
+                            <img src="insta1.jpg">
+                            <img src="insta2.jpg">
+                            <img src="insta3.jpg">
+                            <img src="insta4.jpg">
+                            <img src="insta5.jpg">
+                            <img src="insta6.jpg">
+                            <img src="insta7.jpg">
+                            <img src="insta8.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="app-download">
+                            <h5>DOWNLOAD MOBILE APP</h5>
+                            <img src="play-store.png">
+                            <img src="app-store.png">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="copyright">Design with<i class="fa fa-heart"></i>by easy tutorials</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-icons">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+
+
+        </body>
+</html>
+    
